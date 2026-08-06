@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>المرحلة الثانوية — بنين — كتيب الخطة التشغيلية 1448هـ</title>
+<meta name="description" content="كتيب إلكتروني تفاعلي يعرض صفحات من عرض الخطة التشغيلية المدرسية المرحلة الثانوية — بنين للعام 1448هـ.">
+<style>
+:root{
+  --deep:#04231E; --dark:#07362F; --green:#0E5F51; --mid:#1B7F6E;
+  --gold:#C08A2E; --goldl:#E8C98A; --light:#C5DBD5; --white:#fff;
+  --shadow:0 24px 60px rgba(0,0,0,.45);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  background:radial-gradient(1200px 700px at 70% -10%, #0b4136 0%, var(--deep) 60%);
+  color:var(--white); font-family:"Segoe UI","Dubai",system-ui,-apple-system,"Tahoma",sans-serif;
+  display:flex; flex-direction:column; min-height:100dvh; overflow-x:hidden;
+}
+header{padding:14px 18px 6px;text-align:center}
+header h1{font-size:clamp(15px,2.6vw,21px);font-weight:700;letter-spacing:.2px}
+header p{font-size:clamp(11px,2vw,13px);color:var(--goldl);margin-top:4px}
+main{flex:1;display:flex;align-items:center;justify-content:center;padding:6px 12px 0}
+.stage{position:relative;width:min(96vw,1060px);aspect-ratio:4/3;perspective:2600px}
+.sheet{position:absolute;inset:0;border-radius:14px;overflow:hidden;box-shadow:var(--shadow);background:var(--dark)}
+.sheet img{width:100%;height:100%;display:block;object-fit:contain;background:var(--deep)}
+.leaf{position:absolute;inset:0;transform-style:preserve-3d;transform-origin:right center;
+      transition:transform .72s cubic-bezier(.42,0,.28,1);will-change:transform;z-index:3}
+.leaf.hidden{display:none}
+.face{position:absolute;inset:0;backface-visibility:hidden;border-radius:14px;overflow:hidden;
+      box-shadow:var(--shadow);background:var(--dark)}
+.face img{width:100%;height:100%;display:block;object-fit:contain;background:var(--deep)}
+.face.back{transform:rotateY(180deg);
+  background:linear-gradient(135deg,#07362F 0%,#04231E 100%);
+  display:flex;align-items:center;justify-content:center}
+.face.back span{color:#12564A;font-size:clamp(28px,7vw,64px);font-weight:800;letter-spacing:2px}
+.leaf.turn{transform:rotateY(-180deg)}
+.leaf.noanim{transition:none}
+nav{display:flex;align-items:center;justify-content:center;gap:10px;padding:8px 12px 12px;flex-wrap:wrap;
+    position:sticky;top:0;z-index:20;background:linear-gradient(180deg,rgba(4,35,30,.96) 70%,rgba(4,35,30,0))}
+.arw{font-size:20px;line-height:1;font-weight:900}
+.side{position:absolute;top:50%;transform:translateY(-50%);z-index:12;width:46px;height:64px;
+  padding:0;justify-content:center;font-size:28px;font-weight:900;border-radius:12px;
+  background:rgba(7,54,47,.72);backdrop-filter:blur(3px);opacity:.55}
+.side:hover{opacity:1;background:var(--green)}
+.side.left{left:-10px} .side.right{right:-10px}
+.side:disabled{opacity:.12}
+button{font:inherit;cursor:pointer;border:0;border-radius:999px;padding:10px 18px;
+  background:var(--green);color:#fff;font-weight:700;font-size:14px;transition:.18s;
+  display:inline-flex;align-items:center;gap:8px}
+button:hover{background:var(--mid)}
+button:disabled{opacity:.35;cursor:default;background:var(--dark)}
+.counter{background:var(--dark);border:1px solid #14544A;border-radius:999px;padding:9px 16px;
+  font-size:14px;font-weight:700;color:var(--goldl);min-width:96px;text-align:center}
+.icon{background:var(--dark);padding:10px 14px}
+.icon:hover{background:var(--green)}
+.thumbs{display:flex;gap:8px;overflow-x:auto;padding:10px 14px 16px;scrollbar-width:thin}
+.thumbs.hide{display:none}
+.thumbs img{height:62px;width:auto;border-radius:6px;cursor:pointer;opacity:.5;
+  border:2px solid transparent;transition:.15s;flex:0 0 auto;background:var(--deep)}
+.thumbs img:hover{opacity:.85}
+.thumbs img.on{opacity:1;border-color:var(--gold)}
+footer{text-align:center;padding:0 16px 18px;font-size:12px;color:#8FB0A8;line-height:1.7}
+footer b{color:var(--goldl)}
+@media (max-width:640px){
+  .stage{width:96vw}
+  nav{gap:6px} button{padding:9px 14px;font-size:13px}
+  .thumbs img{height:44px}
+}
+</style>
+</head>
+<body>
+<header>
+  <h1>الخطة التشغيلية المدرسية — المرحلة الثانوية — بنين — 1448هـ</h1>
+  <p>كتيب تعريفي — اقلب الصفحات لتشاهد نماذج من العرض قبل الشراء</p>
+</header>
+
+<nav>
+  <button id="next" title="الصفحة التالية"><span class="arw">‹</span> التالية</button>
+  <div class="counter" id="counter">١ / ١٩</div>
+  <button id="prev" title="الصفحة السابقة">السابقة <span class="arw">›</span></button>
+  <button class="icon" id="tg" title="الصفحات المصغّرة">☰</button>
+  <button class="icon" id="fs" title="ملء الشاشة">⛶</button>
+</nav>
+
+<main>
+  <div class="stage" id="stage">
+    <div class="sheet"><img id="base" alt="صفحة الكتيب"></div>
+    <div class="leaf hidden" id="leaf">
+      <div class="face front"><img id="lfront" alt=""></div>
+      <div class="face back"><span>١٤٤٨هـ</span></div>
+    </div>
+    <button class="side left" id="sideNext" title="التالية">‹</button>
+    <button class="side right" id="sidePrev" title="السابقة">›</button>
+  </div>
+</main>
+
+<div class="thumbs" id="thumbs"></div>
+
+<footer>
+  <b>الخطة التشغيلية المدرسية 1448هـ</b> — كتيب تعريفي للعرض فقط.
+  المحتوى مملوك لصاحبه ولا يُسمح بإعادة بيعه أو توزيعه أو نشره.
+</footer>
+
+<script>
+(function(){
+  var PAGES = ["p01.png","p02.png","p03.png","p04.png","p05.png","p06.png","p07.png","p08.png","p09.png","p10.png","p11.png","p12.png","p13.png","p14.png","p15.png","p16.png","p17.png","p18.png","p19.png"];
+  var N = PAGES.length, i = 0, busy = false;
+  var base = document.getElementById('base'), leaf = document.getElementById('leaf'),
+      lf = document.getElementById('lfront'), counter = document.getElementById('counter'),
+      bn = document.getElementById('next'), bp = document.getElementById('prev'),
+      sn = document.getElementById('sideNext'), sp = document.getElementById('sidePrev'),
+      thumbs = document.getElementById('thumbs'), stage = document.getElementById('stage');
+
+  function ar(n){ return String(n).replace(/[0-9]/g, function(d){ return '٠١٢٣٤٥٦٧٨٩'[d]; }); }
+  function preload(k){ [k-1,k,k+1,k+2].forEach(function(x){
+      if(x>=0 && x<N){ var im = new Image(); im.src = PAGES[x]; } }); }
+
+  function paint(){
+    base.src = PAGES[i];
+    counter.textContent = ar(i+1) + ' / ' + ar(N);
+    bn.disabled = sn.disabled = (i >= N-1); bp.disabled = sp.disabled = (i <= 0);
+    Array.prototype.forEach.call(thumbs.children, function(t, k){
+      t.classList.toggle('on', k === i);
+      if (k === i) t.scrollIntoView({block:'nearest', inline:'center', behavior:'smooth'});
+    });
+    preload(i);
+  }
+
+  function go(dir){
+    if (busy) return;
+    var to = i + dir;
+    if (to < 0 || to >= N) return;
+    busy = true;
+    if (dir > 0){
+      base.src = PAGES[to];
+      lf.src = PAGES[i];
+      leaf.classList.remove('turn'); leaf.classList.add('noanim','hidden');
+      void leaf.offsetWidth;
+      leaf.classList.remove('hidden','noanim');
+      void leaf.offsetWidth;
+      leaf.classList.add('turn');
+    } else {
+      base.src = PAGES[i];
+      lf.src = PAGES[to];
+      leaf.classList.add('noanim','turn'); leaf.classList.remove('hidden');
+      void leaf.offsetWidth;
+      leaf.classList.remove('noanim');
+      void leaf.offsetWidth;
+      leaf.classList.remove('turn');
+    }
+    window.setTimeout(function(){
+      i = to; leaf.classList.add('hidden'); leaf.classList.remove('turn');
+      paint(); busy = false;
+    }, 740);
+  }
+
+  bn.onclick = sn.onclick = function(e){ if(e) e.stopPropagation(); go(1); };
+  bp.onclick = sp.onclick = function(e){ if(e) e.stopPropagation(); go(-1); };
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'ArrowLeft') go(1);
+    if (e.key === 'ArrowRight') go(-1);
+  });
+
+  var sx = null;
+  stage.addEventListener('touchstart', function(e){ sx = e.touches[0].clientX; }, {passive:true});
+  stage.addEventListener('touchend', function(e){
+    if (sx === null) return;
+    var dx = e.changedTouches[0].clientX - sx; sx = null;
+    if (Math.abs(dx) > 45) go(dx > 0 ? -1 : 1);
+  }, {passive:true});
+  stage.addEventListener('click', function(e){
+    var r = stage.getBoundingClientRect();
+    go((e.clientX - r.left) < r.width/2 ? 1 : -1);
+  });
+
+  PAGES.forEach(function(src, k){
+    var t = document.createElement('img');
+    t.src = src; t.alt = 'صفحة ' + ar(k+1); t.loading = 'lazy';
+    t.onclick = function(){ if(!busy && k !== i){ i = k; paint(); } };
+    thumbs.appendChild(t);
+  });
+  document.getElementById('tg').onclick = function(){ thumbs.classList.toggle('hide'); };
+  document.getElementById('fs').onclick = function(){
+    if (document.fullscreenElement) document.exitFullscreen();
+    else document.documentElement.requestFullscreen();
+  };
+
+  paint();
+})();
+</script>
+</body>
+</html>
